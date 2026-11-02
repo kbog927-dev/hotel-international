@@ -1,0 +1,21 @@
+# Déploiement automatique sur Netlify depuis le dépôt Git :
+# Netlify lance `node build.mjs` dans site/ et publie site/dist/.
+[build]
+  base = "site"
+  command = "node build.mjs"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Cache long pour les images et feuilles de style, HTML toujours à jour.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

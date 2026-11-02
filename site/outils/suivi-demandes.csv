@@ -1,0 +1,2 @@
+reference;date_reception;canal;nom;telephone;arrivee;depart;personnes;chambre;statut;montant;notes
+IH-EXEMPLE-0001;02/11/2026;site;Exemple (à supprimer);;10/11/2026;12/11/2026;2;Catégorie 1;confirmée;;Ligne d'exemple : canal = site / téléphone / sur place / whatsapp ; statut = reçue / rappelée / confirmée / refusée / sans suite
